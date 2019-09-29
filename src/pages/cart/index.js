@@ -7,10 +7,10 @@ import { connect } from 'react-redux';
 
 function Cart({ cart, total, dispatch }) {
   function increment(product) {
-    dispatch(CartActions.updateAmount(product.id, product.amount + 1));
+    dispatch(CartActions.updateAmountRequest(product.id, product.amount + 1));
   }
   function decrement(product) {
-    dispatch(CartActions.updateAmount(product.id, product.amount - 1));
+    dispatch(CartActions.updateAmountRequest(product.id, product.amount - 1));
   }
 
   return (
